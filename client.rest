@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:3000
+
+### Global Test
+# @name GetHello
+GET {{baseUrl}}/
+
+
+### List all categories
+# @name ListAllCategories
+GET {{baseUrl}}/categories
+
+### Find one category
+# @name FindOneCategory
+GET {{baseUrl}}/categories/1
+
+### Create category
+# @name CreateCategory
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+    "name": "Pedreiros"
+}
+
+### Update category
+# @name UpdateCategory
+PATCH {{baseUrl}}/categories/2
+Content-Type: application/json
+
+{
+    "name": "Mecânica"
+}
+
+### Delete category
+# @name UpdateCategory
+DELETE {{baseUrl}}/categories/3
