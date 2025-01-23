@@ -18,7 +18,7 @@ export class CategoriesService {
     throw new NotFoundException('Category not found.');
   }
 
-  create(body: CreateCategoryDto) {
+  create(body: CreateCategoryDto): CategoryEntity {
     this.lastID++;
     const categoryCreated = {
       id: this.lastID,

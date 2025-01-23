@@ -1,9 +1,5 @@
 @baseUrl = http://localhost:3000
 
-### Global Test
-# @name GetHello
-GET {{baseUrl}}/
-
 
 ### List all categories
 # @name ListAllCategories
@@ -19,7 +15,7 @@ POST {{baseUrl}}/categories
 Content-Type: application/json
 
 {
-    "name": "Biológicas"
+    "name": "Mecânica"
 }
 
 ### Update category
@@ -33,4 +29,38 @@ Content-Type: application/json
 
 ### Delete category
 # @name UpdateCategory
-DELETE {{baseUrl}}/categories/1
+DELETE {{baseUrl}}/categories/2
+
+
+### List all tasks
+# @name ListAllTasks
+GET {{baseUrl}}/tasks
+
+### Find one task
+# @name FindOneTask
+GET {{baseUrl}}/tasks/2
+
+### Create task
+# @name CreateTask
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "Tarefa 02",
+    "description": "Descrição teste aqui",
+    "status": "PENDING",
+    "category_id": 1
+}
+
+### Update task
+# @name UpdateTask
+PATCH {{baseUrl}}/tasks/2
+Content-Type: application/json
+
+{
+    "category_id": 2
+}
+
+### Delete task
+# @name DeleteTask
+DELETE {{baseUrl}}/tasks/1
