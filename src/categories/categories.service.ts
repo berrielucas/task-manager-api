@@ -36,7 +36,10 @@ export class CategoriesService {
         ...categoryUpdated,
         ...body,
       };
-      return this.categories[categoryIndex];
+      return {
+        message: "Category updated successfully",
+        data: this.categories[categoryIndex]
+      };
     }
     throw new NotFoundException('Category not found.');
   }
@@ -46,7 +49,10 @@ export class CategoriesService {
     if (categoryIndex >= 0) {
       const categoryRemoved = this.categories[categoryIndex];
       this.categories.splice(categoryIndex, 1);
-      return categoryRemoved;
+      return {
+        message: "Category removed successfully",
+        data: categoryRemoved
+      };
     }
     throw new NotFoundException('Category not found.');
   }

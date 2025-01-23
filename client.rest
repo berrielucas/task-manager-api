@@ -19,12 +19,12 @@ POST {{baseUrl}}/categories
 Content-Type: application/json
 
 {
-    "name": "Pedreiros"
+    "name": "Biológicas"
 }
 
 ### Update category
 # @name UpdateCategory
-PATCH {{baseUrl}}/categories/2
+PATCH {{baseUrl}}/categories/1
 Content-Type: application/json
 
 {
@@ -33,4 +33,4 @@ Content-Type: application/json
 
 ### Delete category
 # @name UpdateCategory
-DELETE {{baseUrl}}/categories/3
+DELETE {{baseUrl}}/categories/1
