@@ -6,6 +6,6 @@ import { CategoriesModule } from 'src/categories/categories.module';
 @Module({
   controllers: [TasksController],
   imports: [CategoriesModule],
-  providers: [TasksService]
+  providers: [TasksService],
 })
 export class TasksModule {}
